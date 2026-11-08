@@ -1,5 +1,4 @@
 
-
 import { supabase } from './supabase.js';
 
 const form = document.getElementById('loginForm');
@@ -53,24 +52,27 @@ forgotBtn.addEventListener('click', async (e) => {
     return;
   }
 
+  forgotBtn.style.pointerEvents = 'none';
   message.textContent = 'Sending reset link...';
 
-  const redirectTo =
-    window.location.origin +
-    window.location.pathname.replace(
-      'admin-login.html',
-      'reset-password.html'
+  try {
+    const redirectTo =
+      'https://maimunaprintingpressofficial.netlify.app/reset-password.html';
+
+    const { error } = await supabase.auth.resetPasswordForEmail(
+      email,
+      { redirectTo }
     );
 
-  const { error } = await supabase.auth.resetPasswordForEmail(
-    email,
-    { redirectTo }
-  );
+    if (error) throw error;
 
-  if (error) {
-    message.textContent = error.message;
-  } else {
     message.textContent =
       'Password reset link aapke email par bhej diya gaya hai.';
+
+  } catch (error) {
+    message.textContent = error.message;
+
+  } finally {
+    forgotBtn.style.pointerEvents = 'auto';
   }
 });
