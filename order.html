@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Your Order | Maimuna Printing Press</title>
+  <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html">MAIMUNA <span>PRINTING PRESS</span></a>
+    <a href="index.html" class="home-link">Home</a>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h1>Place Your Order</h1>
+      <p class="subtitle">Tell us what you need. We will contact you shortly.</p>
+
+      <form id="orderForm">
+        <label for="customerName">Full Name *</label>
+        <input id="customerName" type="text"
+          placeholder="Enter your name" required maxlength="100">
+
+        <label for="phone">Mobile Number *</label>
+        <input id="phone" type="tel"
+          placeholder="Enter mobile number" required maxlength="20">
+
+        <label for="email">Email Address</label>
+        <input id="email" type="email"
+          placeholder="Enter email (optional)" maxlength="150">
+
+        <label for="service">Printing Service *</label>
+        <select id="service" required>
+          <option value="">Select a service</option>
+          <option value="Business Cards">Business Cards</option>
+          <option value="Brochure">Brochure</option>
+          <option value="Pamphlet / Flyer">Pamphlet / Flyer</option>
+          <option value="Wedding Cards">Wedding Cards</option>
+          <option value="Banner / Flex">Banner / Flex</option>
+          <option value="Invitation Cards">Invitation Cards</option>
+          <option value="Other Printing Work">Other Printing Work</option>
+        </select>
+
+        <label for="quantity">Quantity *</label>
+        <input id="quantity" type="number"
+          min="1" max="1000000" placeholder="Enter quantity" required>
+
+        <label for="details">Order Details *</label>
+        <textarea id="details" rows="5"
+          placeholder="Size, paper, colour, design, delivery requirements..."
+          required maxlength="3000"></textarea>
+
+        <label for="file">Attach PDF or Image (optional)</label>
+        <input id="file" type="file"
+          accept=".pdf,.jpg,.jpeg,.png,.webp">
+
+        <p class="file-help">Maximum file size: 20 MB</p>
+
+        <button type="submit" id="submitBtn">
+          Submit Order
+        </button>
+
+        <p id="formMessage" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="js/order.js"></script>
+</body>
+</html>

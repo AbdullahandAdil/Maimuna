@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Maimuna Printing Press</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div>
+      <h2>Maimuna <span>Printing Press</span></h2>
+      <p>Admin Control Panel</p>
+    </div>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="container">
+    <div class="welcome">
+      <h1>Dashboard</h1>
+      <p>Welcome back, Admin!</p>
+    </div>
+
+    <section class="stats">
+      <div class="stat-card">
+        <p>Total Orders</p>
+        <h2 id="totalOrders">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <p>Pending</p>
+        <h2 id="pendingOrders">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <p>Processing</p>
+        <h2 id="processingOrders">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <p>Completed</p>
+        <h2 id="completedOrders">0</h2>
+      </div>
+    </section>
+
+    <section class="orders-section">
+      <div class="section-heading">
+        <div>
+          <h2>Customer Orders</h2>
+          <p>Manage all printing orders</p>
+        </div>
+        <button id="refreshBtn" class="refresh-btn">
+          Refresh
+        </button>
+      </div>
+
+      <p id="statusMessage"></p>
+
+      <div class="table-wrap">
+        <table>
+<thead>
+  <tr>
+    <th>Customer</th>
+    <th>Phone</th>
+    <th>Service</th>
+    <th>Quantity</th>
+    <th>Details</th>
+    <th>Date</th>
+    <th>Customer File</th>
+    <th>Status</th>
+  </tr>
+</thead>
+          <tbody id="ordersList">
+            <tr>
+              <td colspan="8">Loading orders...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+<section class="orders-section" id="manageServices">
+  <div class="section-heading">
+    <div>
+      <h2>Manage Services</h2>
+      <p>Add and manage your printing services</p>
+    </div>
+  </div>
+
+  <form id="serviceForm" class="service-form">
+    <input type="hidden" id="serviceId">
+
+    <input
+      type="text"
+      id="serviceName"
+      placeholder="Service Name"
+      required
+    >
+
+    <textarea
+      id="serviceDescription"
+      placeholder="Service Description"
+      required
+    ></textarea>
+
+    <label>
+      <input type="checkbox" id="serviceActive" checked>
+      Active Service
+    </label>
+
+    <button type="submit" id="saveServiceBtn">
+      Add Service
+    </button>
+
+    <button type="button" id="cancelServiceBtn">
+      Cancel
+    </button>
+  </form>
+
+  <p id="serviceMessage"></p>
+
+  <div id="adminServicesList">
+    Loading services...
+  </div>
+</section>
+
+<!-- LATEST DESIGNS MANAGEMENT -->
+
+<section class="orders-section" id="manageDesigns">
+
+  <div class="section-heading">
+    <div>
+      <h2>Latest Designs</h2>
+      <p>Upload and manage your creative designs</p>
+    </div>
+  </div>
+
+  <form id="designForm" class="service-form">
+
+    <input type="hidden" id="designId">
+
+    <input
+      type="text"
+      id="designTitle"
+      placeholder="Design Title"
+      required
+    >
+
+    <textarea
+      id="designDescription"
+      placeholder="Design Description"
+    ></textarea>
+
+    <input
+      type="text"
+      id="designCategory"
+      placeholder="Category (Wedding, Business, Banner...)"
+    >
+
+    <label>Choose Design Image</label>
+    <input
+      type="file"
+      id="designImage"
+      accept="image/jpeg,image/png,image/webp"
+    >
+
+    <label>
+      <input type="checkbox" id="designPublished" checked>
+      Publish Design
+    </label>
+
+    <button type="submit" id="saveDesignBtn">
+      Upload Design
+    </button>
+
+    <button type="button" id="cancelDesignBtn">
+      Cancel
+    </button>
+
+  </form>
+
+  <p id="designMessage"></p>
+
+  <div id="adminDesignsList">
+    Loading designs...
+  </div>
+
+</section>
+
+<section class="orders-section" id="customerMessages">
+
+  <div class="section-heading">
+    <div>
+      <h2>Customer Messages</h2>
+      <p>Messages received from website visitors</p>
+    </div>
+  </div>
+
+  <div id="contactMessagesList">
+    Loading messages...
+  </div>
+
+</section>
+
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Maimuna Printing Press</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="logo">M</div>
+
+      <h1>Admin Login</h1>
+      <p>Maimuna Printing Press</p>
+
+      <form id="loginForm">
+        <label>Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter admin email"
+          required
+        >
+
+        <label>Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          required
+        >
+        
+        <button type="submit" id="loginBtn">
+          Login to Dashboard
+        </button>
+        
+        
+<p>
+  <a href="#" id="forgotPassword">
+    Forgot Password?
+  </a>
+</p>
+
+
+        <p id="message"></p>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js/admin-login.js"></script>
+</body>
+</html>
