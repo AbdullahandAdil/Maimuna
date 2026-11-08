@@ -101,3 +101,21 @@ button:disabled {
   overflow-wrap: anywhere;
   color: #f0c56b;
 }
+#forgotPassword {
+  display: inline-block;
+  margin-top: 12px;
+  color: #d9ae50;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#forgotPassword:hover {
+  color: #f0c96b;
+  text-decoration: underline;
+}
+
+#forgotPassword:active {
+  opacity: 0.7;
+}
