@@ -1,0 +1,338 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: #fff;
+}
+
+.topbar {
+  background: #1b2638;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #344258;
+}
+
+.topbar h2 {
+  font-size: 21px;
+}
+
+.topbar h2 span {
+  color: #d4a94d;
+}
+
+.topbar p,
+.welcome p,
+.section-heading p {
+  color: #aab5c5;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.logout-btn,
+.refresh-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: #d4a94d;
+  color: #101827;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.welcome {
+  margin-bottom: 25px;
+}
+
+.welcome h1 {
+  font-size: 30px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: #1b2638;
+  border: 1px solid #344258;
+  border-radius: 13px;
+  padding: 22px;
+}
+
+.stat-card p {
+  color: #b8c1cf;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  color: #d4a94d;
+  font-size: 30px;
+  margin-top: 12px;
+}
+
+.orders-section {
+  background: #1b2638;
+  border: 1px solid #344258;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.refresh-btn {
+  background: #d4a94d;
+  color: #101827;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid #344258;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+th {
+  color: #e4c276;
+}
+
+td {
+  color: #e2e8f0;
+}
+
+select {
+  background: #101827;
+  color: white;
+  border: 1px solid #526176;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+#statusMessage {
+  color: #e4c276;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-card h2 {
+    font-size: 25px;
+  }
+
+  .container {
+    margin-top: 22px;
+  }
+
+  .orders-section {
+    padding: 14px;
+  }
+
+  .topbar {
+    padding: 15px 4%;
+  }
+
+  .topbar h2 {
+    font-size: 17px;
+  }
+}
+
+/* MANAGE SERVICES */
+
+.service-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+  padding: 20px;
+  background: #1b293d;
+  border: 1px solid #34445c;
+  border-radius: 12px;
+}
+
+.service-form input[type="text"],
+.service-form textarea {
+  width: 100%;
+  padding: 13px;
+  background: #101827;
+  border: 1px solid #44536a;
+  border-radius: 7px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.service-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.service-form label {
+  color: #d9ae50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  background: #d9ae50;
+  color: #101827;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cancelServiceBtn {
+  background: #44536a;
+  color: white;
+}
+
+.admin-service-card {
+  background: #1b293d;
+  border: 1px solid #34445c;
+  border-radius: 10px;
+  padding: 18px;
+  margin: 12px 0;
+}
+
+.admin-service-card h3 {
+  color: #e3ba5e;
+  margin-bottom: 8px;
+}
+
+.admin-service-card p {
+  color: #c0cad8;
+  margin-bottom: 15px;
+}
+
+.admin-service-card button {
+  padding: 9px 14px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-service-btn {
+  background: #d9ae50;
+  color: #101827;
+}
+
+.delete-service-btn {
+  background: #b93636;
+  color: white;
+}
+
+.toggle-service-btn {
+  background: #267b58;
+  color: white;
+}
+
+/* LATEST DESIGNS MANAGEMENT */
+
+#designImage {
+  color: white;
+  padding: 10px;
+  border: 1px solid #44536a;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.admin-design-card {
+  background: #1b293d;
+  border: 1px solid #34445c;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 15px 0;
+}
+
+.admin-design-card img {
+  width: 100%;
+  max-width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 9px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.admin-design-card h3 {
+  color: #e3ba5e;
+  margin-bottom: 8px;
+}
+
+.admin-design-card p {
+  color: #c0cad8;
+  margin-bottom: 12px;
+}
+
+.admin-design-card button {
+  padding: 10px 14px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-design-btn {
+  background: #d9ae50;
+  color: #101827;
+}
+
+.delete-design-btn {
+  background: #b93636;
+  color: white;
+}
+
+.publish-design-btn {
+  background: #267b58;
+  color: white;
+}

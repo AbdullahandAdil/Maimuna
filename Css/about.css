@@ -1,0 +1,278 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #101827;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.about-header {
+  min-height: 75px;
+  padding: 18px 6%;
+  background: #1b293d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #34445c;
+}
+
+.about-header h2 {
+  font-size: 22px;
+}
+
+.about-header span {
+  color: #d9ae50;
+}
+
+.about-header a {
+  color: #d9ae50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 85px 15px;
+  background: linear-gradient(135deg, #101827, #263852);
+}
+
+.about-hero > p:first-child,
+.small-heading {
+  color: #d9ae50;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.about-hero h1 {
+  font-size: clamp(35px, 6vw, 55px);
+  margin-bottom: 18px;
+}
+
+.about-hero p:last-child {
+  color: #b9c4d3;
+  line-height: 1.7;
+}
+
+.about-intro {
+  width: 90%;
+  max-width: 1150px;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image {
+  min-height: 350px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #263852, #101827);
+  border: 1px solid #d9ae50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.image-placeholder {
+  border: 2px solid #d9ae50;
+  padding: 45px 20px;
+  width: 100%;
+}
+
+.image-placeholder span {
+  color: #d9ae50;
+  letter-spacing: 5px;
+  
+}
+
+.image-placeholder h2 {
+  margin: 18px 0;
+  font-size: 30px;
+}
+
+.image-placeholder p {
+  color: #b9c4d3;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-content > p:not(.small-heading) {
+  color: #b9c4d3;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.about-button,
+.about-cta a {
+  display: inline-block;
+  background: #d9ae50;
+  color: #101827;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.why-us {
+  width: 90%;
+  max-width: 1150px;
+  margin: 90px auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.section-title > p:last-child {
+  color: #b9c4d3;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.why-card {
+  background: #1b293d;
+  border: 1px solid #34445c;
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-7px);
+  border-color: #d9ae50;
+}
+
+.why-icon {
+  font-size: 35px;
+  color: #d9ae50;
+  margin-bottom: 18px;
+}
+
+.why-card h3 {
+  color: #e3ba5e;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: #b9c4d3;
+  line-height: 1.7;
+}
+
+.mission-section {
+  width: 90%;
+  max-width: 1150px;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.mission-card {
+  padding: 35px;
+  background: #1b293d;
+  border: 1px solid #34445c;
+  border-radius: 15px;
+}
+
+.mission-card h2 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.mission-card > p:last-child {
+  color: #b9c4d3;
+  line-height: 1.8;
+}
+
+.about-cta {
+  width: 90%;
+  max-width: 1150px;
+  margin: 80px auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: #1b293d;
+  border: 1px solid #d9ae50;
+  border-radius: 18px;
+}
+
+.about-cta h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.about-cta p {
+  color: #b9c4d3;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #1b293d;
+  color: #b9c4d3;
+}
+
+@media (max-width: 750px) {
+  .about-intro,
+  .mission-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro {
+    gap: 30px;
+  }
+
+  .about-header h2 {
+    font-size: 17px;
+  }
+
+  .about-hero {
+    padding: 60px 15px;
+  }
+
+  .about-content h2 {
+    font-size: 27px;
+  }
+}
+
+
+/* MAIMUNA BRAND NAME */
+.image-placeholder span {
+  display: block;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: #d9ae50;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .image-placeholder span {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+}
