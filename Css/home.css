@@ -639,3 +639,22 @@ a {
     height: auto;
   }
 }
+
+/* DESKTOP CTA BUTTON CENTER FIX */
+
+@media (min-width: 851px) {
+  .home-cta .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-cta .hero-buttons a {
+    text-align: center;
+  }
+    }
+    
